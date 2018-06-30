@@ -4,7 +4,7 @@
 #
 Name     : perl-CPAN-Perl-Releases
 Version  : 3.68
-Release  : 1
+Release  : 2
 URL      : https://cpan.metacpan.org/authors/id/B/BI/BINGOS/CPAN-Perl-Releases-3.68.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/B/BI/BINGOS/CPAN-Perl-Releases-3.68.tar.gz
 Summary  : 'Mapping Perl releases on CPAN to the location of the tarballs'
