@@ -4,13 +4,13 @@
 #
 Name     : perl-CPAN-Perl-Releases
 Version  : 3.76
-Release  : 6
+Release  : 7
 URL      : https://cpan.metacpan.org/authors/id/B/BI/BINGOS/CPAN-Perl-Releases-3.76.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/B/BI/BINGOS/CPAN-Perl-Releases-3.76.tar.gz
 Summary  : 'Mapping Perl releases on CPAN to the location of the tarballs'
 Group    : Development/Tools
 License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
-Requires: perl-CPAN-Perl-Releases-license
+Requires: perl-CPAN-Perl-Releases-license = %{version}-%{release}
 BuildRequires : buildreq-cpan
 
 %description
@@ -60,12 +60,12 @@ make TEST_VERBOSE=1 test
 
 %install
 rm -rf %{buildroot}
-mkdir -p %{buildroot}/usr/share/doc/perl-CPAN-Perl-Releases
-cp LICENSE %{buildroot}/usr/share/doc/perl-CPAN-Perl-Releases/LICENSE
+mkdir -p %{buildroot}/usr/share/package-licenses/perl-CPAN-Perl-Releases
+cp LICENSE %{buildroot}/usr/share/package-licenses/perl-CPAN-Perl-Releases/LICENSE
 if test -f Makefile.PL; then
-make pure_install PERL_INSTALL_ROOT=%{buildroot}
+make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
-./Build install --installdirs=site --destdir=%{buildroot}
+./Build install --installdirs=vendor --destdir=%{buildroot}
 fi
 find %{buildroot} -type f -name .packlist -exec rm -f {} ';'
 find %{buildroot} -depth -type d -exec rmdir {} 2>/dev/null ';'
@@ -74,12 +74,12 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/site_perl/5.26.1/CPAN/Perl/Releases.pm
+/usr/lib/perl5/vendor_perl/5.26.1/CPAN/Perl/Releases.pm
 
 %files dev
 %defattr(-,root,root,-)
 /usr/share/man/man3/CPAN::Perl::Releases.3
 
 %files license
-%defattr(-,root,root,-)
-/usr/share/doc/perl-CPAN-Perl-Releases/LICENSE
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/perl-CPAN-Perl-Releases/LICENSE
