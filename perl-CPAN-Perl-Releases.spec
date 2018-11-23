@@ -4,7 +4,7 @@
 #
 Name     : perl-CPAN-Perl-Releases
 Version  : 3.82
-Release  : 11
+Release  : 12
 URL      : https://cpan.metacpan.org/authors/id/B/BI/BINGOS/CPAN-Perl-Releases-3.82.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/B/BI/BINGOS/CPAN-Perl-Releases-3.82.tar.gz
 Summary  : 'Mapping Perl releases on CPAN to the location of the tarballs'
@@ -74,7 +74,7 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.26.1/CPAN/Perl/Releases.pm
+/usr/lib/perl5/vendor_perl/5.28.0/CPAN/Perl/Releases.pm
 
 %files dev
 %defattr(-,root,root,-)
