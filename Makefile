@@ -1,5 +1,5 @@
 PKG_NAME := perl-CPAN-Perl-Releases
-URL = https://cpan.metacpan.org/authors/id/B/BI/BINGOS/CPAN-Perl-Releases-4.22.tar.gz
+URL = https://cpan.metacpan.org/authors/id/B/BI/BINGOS/CPAN-Perl-Releases-5.20191220.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
