@@ -4,10 +4,10 @@
 #
 Name     : perl-CPAN-Perl-Releases
 Version  : 5.20200314
-Release  : 46
+Release  : 47
 URL      : https://cpan.metacpan.org/authors/id/B/BI/BINGOS/CPAN-Perl-Releases-5.20200314.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/B/BI/BINGOS/CPAN-Perl-Releases-5.20200314.tar.gz
-Summary  : Mapping Perl releases on CPAN to the location of the tarballs
+Summary  : 'Mapping Perl releases on CPAN to the location of the tarballs'
 Group    : Development/Tools
 License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
 Requires: perl-CPAN-Perl-Releases-license = %{version}-%{release}
@@ -23,7 +23,6 @@ the tarballs
 Summary: dev components for the perl-CPAN-Perl-Releases package.
 Group: Development
 Provides: perl-CPAN-Perl-Releases-devel = %{version}-%{release}
-Requires: perl-CPAN-Perl-Releases = %{version}-%{release}
 Requires: perl-CPAN-Perl-Releases = %{version}-%{release}
 
 %description dev
@@ -98,4 +97,4 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.1/CPAN/Perl/Releases.pm
+/usr/lib/perl5/vendor_perl/5.30.2/CPAN/Perl/Releases.pm
