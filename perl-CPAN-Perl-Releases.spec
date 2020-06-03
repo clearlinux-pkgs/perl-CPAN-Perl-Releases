@@ -4,7 +4,7 @@
 #
 Name     : perl-CPAN-Perl-Releases
 Version  : 5.20200601
-Release  : 52
+Release  : 53
 URL      : https://cpan.metacpan.org/authors/id/B/BI/BINGOS/CPAN-Perl-Releases-5.20200601.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/B/BI/BINGOS/CPAN-Perl-Releases-5.20200601.tar.gz
 Summary  : 'Mapping Perl releases on CPAN to the location of the tarballs'
@@ -97,4 +97,4 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.2/CPAN/Perl/Releases.pm
+/usr/lib/perl5/vendor_perl/5.30.3/CPAN/Perl/Releases.pm
