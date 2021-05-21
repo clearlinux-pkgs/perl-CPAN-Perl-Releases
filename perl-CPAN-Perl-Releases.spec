@@ -97,4 +97,4 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.32.1/CPAN/Perl/Releases.pm
+/usr/lib/perl5/vendor_perl/5.34.0/CPAN/Perl/Releases.pm
