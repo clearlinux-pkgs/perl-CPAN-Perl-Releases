@@ -4,10 +4,10 @@
 # Using build pattern: cpan
 #
 Name     : perl-CPAN-Perl-Releases
-Version  : 5.20230410
-Release  : 109
-URL      : https://cpan.metacpan.org/authors/id/B/BI/BINGOS/CPAN-Perl-Releases-5.20230410.tar.gz
-Source0  : https://cpan.metacpan.org/authors/id/B/BI/BINGOS/CPAN-Perl-Releases-5.20230410.tar.gz
+Version  : 5.20230411
+Release  : 110
+URL      : https://cpan.metacpan.org/authors/id/B/BI/BINGOS/CPAN-Perl-Releases-5.20230411.tar.gz
+Source0  : https://cpan.metacpan.org/authors/id/B/BI/BINGOS/CPAN-Perl-Releases-5.20230411.tar.gz
 Summary  : 'Mapping Perl releases on CPAN to the location of the tarballs'
 Group    : Development/Tools
 License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
@@ -51,8 +51,8 @@ perl components for the perl-CPAN-Perl-Releases package.
 
 
 %prep
-%setup -q -n CPAN-Perl-Releases-5.20230410
-cd %{_builddir}/CPAN-Perl-Releases-5.20230410
+%setup -q -n CPAN-Perl-Releases-5.20230411
+cd %{_builddir}/CPAN-Perl-Releases-5.20230411
 
 %build
 export http_proxy=http://127.0.0.1:9/
