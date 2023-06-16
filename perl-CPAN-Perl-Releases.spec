@@ -4,10 +4,10 @@
 # Using build pattern: cpan
 #
 Name     : perl-CPAN-Perl-Releases
-Version  : 5.20230423
-Release  : 114
-URL      : https://cpan.metacpan.org/authors/id/B/BI/BINGOS/CPAN-Perl-Releases-5.20230423.tar.gz
-Source0  : https://cpan.metacpan.org/authors/id/B/BI/BINGOS/CPAN-Perl-Releases-5.20230423.tar.gz
+Version  : 5.20230616
+Release  : 115
+URL      : https://cpan.metacpan.org/authors/id/B/BI/BINGOS/CPAN-Perl-Releases-5.20230616.tar.gz
+Source0  : https://cpan.metacpan.org/authors/id/B/BI/BINGOS/CPAN-Perl-Releases-5.20230616.tar.gz
 Summary  : 'Mapping Perl releases on CPAN to the location of the tarballs'
 Group    : Development/Tools
 License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
@@ -51,8 +51,11 @@ perl components for the perl-CPAN-Perl-Releases package.
 
 
 %prep
-%setup -q -n CPAN-Perl-Releases-5.20230423
-cd %{_builddir}/CPAN-Perl-Releases-5.20230423
+%setup -q -n CPAN-Perl-Releases-5.20230616
+cd %{_builddir}/CPAN-Perl-Releases-5.20230616
+pushd ..
+cp -a CPAN-Perl-Releases-5.20230616 buildavx2
+popd
 
 %build
 export http_proxy=http://127.0.0.1:9/
@@ -60,7 +63,7 @@ export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
 if test -f Makefile.PL; then
-%{__perl} Makefile.PL
+%{__perl} -I. Makefile.PL
 make  %{?_smp_mflags}
 else
 %{__perl} Build.PL
@@ -87,6 +90,7 @@ find %{buildroot} -type f -name .packlist -exec rm -f {} ';'
 find %{buildroot} -depth -type d -exec rmdir {} 2>/dev/null ';'
 find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 %{_fixperms} %{buildroot}/*
+/usr/bin/elf-move.py avx2 %{buildroot}-v3 %{buildroot} %{buildroot}/usr/share/clear/filemap/filemap-%{name}
 
 %files
 %defattr(-,root,root,-)
