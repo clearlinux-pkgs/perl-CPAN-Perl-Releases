@@ -1,10 +1,16 @@
 ==================================================
-Changes from 2018-06-17 00:00:00 +0000 to present.
+Changes from 2018-06-24 00:00:00 +0000 to present.
 ==================================================
 
 -----------------------------------------------
-version 5.20230616 at 2023-06-16 08:16:17 +0000
+version 5.20230623 at 2023-06-23 21:52:24 +0000
 -----------------------------------------------
+
+  Change: b89377d4677c288d0b76ed06e27ba649d1b21f74
+  Author: Chris 'BinGOs' Williams <chris@bingosnet.co.uk>
+  Date : 2023-06-23 22:52:24 +0000
+
+    Updated for v5.38.0-RC2 
 
   Change: 488c1baf27c61a77e2af01f2205fa3230e8ac4da
   Author: Chris 'BinGOs' Williams <chris@bingosnet.co.uk>
@@ -930,36 +936,6 @@ version 3.68 at 2018-06-27 00:55:44 +0000
 
     Updated for v5.29.0 
 
------------------------------------------
-version 3.66 at 2018-06-23 08:49:18 +0000
------------------------------------------
-
-  Change: 71317c12d5690ebf283bf2cd8a8950df1ea5b5a4
-  Author: Chris 'BinGOs' Williams <chris@bingosnet.co.uk>
-  Date : 2018-06-23 09:49:18 +0000
-
-    Updated for v5.28.0 
-
------------------------------------------
-version 3.64 at 2018-06-19 20:54:52 +0000
------------------------------------------
-
-  Change: 7e9a12d611aa91158c9c110bacdd85b51ee52cb4
-  Author: Chris 'BinGOs' Williams <chris@bingosnet.co.uk>
-  Date : 2018-06-19 21:54:52 +0000
-
-    Updated for v5.28.0-RC4 
-
------------------------------------------
-version 3.62 at 2018-06-19 07:06:23 +0000
------------------------------------------
-
-  Change: 153ed06e1ee8e997b6bc193627be6f800f40b96f
-  Author: Chris 'BinGOs' Williams <chris@bingosnet.co.uk>
-  Date : 2018-06-19 08:06:23 +0000
-
-    Updated for v5.28.0-RC3 
-
 ==================================================
-Plus 178 releases after 2018-06-17 00:00:00 +0000.
+Plus 181 releases after 2018-06-24 00:00:00 +0000.
 ==================================================
