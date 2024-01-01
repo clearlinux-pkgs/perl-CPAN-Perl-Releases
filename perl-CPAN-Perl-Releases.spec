@@ -6,17 +6,16 @@
 # autospec commit: c1050fe
 #
 Name     : perl-CPAN-Perl-Releases
-Version  : 5.20231129
-Release  : 127
-URL      : https://cpan.metacpan.org/authors/id/B/BI/BINGOS/CPAN-Perl-Releases-5.20231129.tar.gz
-Source0  : https://cpan.metacpan.org/authors/id/B/BI/BINGOS/CPAN-Perl-Releases-5.20231129.tar.gz
+Version  : 5.20231230
+Release  : 128
+URL      : https://cpan.metacpan.org/authors/id/B/BI/BINGOS/CPAN-Perl-Releases-5.20231230.tar.gz
+Source0  : https://cpan.metacpan.org/authors/id/B/BI/BINGOS/CPAN-Perl-Releases-5.20231230.tar.gz
 Summary  : 'Mapping Perl releases on CPAN to the location of the tarballs'
 Group    : Development/Tools
 License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
 Requires: perl-CPAN-Perl-Releases-license = %{version}-%{release}
 Requires: perl-CPAN-Perl-Releases-perl = %{version}-%{release}
 BuildRequires : buildreq-cpan
-BuildRequires : perl(Getopt::Long)
 # Suppress stripping binaries
 %define __strip /bin/true
 %define debug_package %{nil}
@@ -54,10 +53,10 @@ perl components for the perl-CPAN-Perl-Releases package.
 
 
 %prep
-%setup -q -n CPAN-Perl-Releases-5.20231129
-cd %{_builddir}/CPAN-Perl-Releases-5.20231129
+%setup -q -n CPAN-Perl-Releases-5.20231230
+cd %{_builddir}/CPAN-Perl-Releases-5.20231230
 pushd ..
-cp -a CPAN-Perl-Releases-5.20231129 buildavx2
+cp -a CPAN-Perl-Releases-5.20231230 buildavx2
 popd
 
 %build
