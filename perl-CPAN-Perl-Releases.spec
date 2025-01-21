@@ -7,7 +7,7 @@
 #
 Name     : perl-CPAN-Perl-Releases
 Version  : 5.20250120
-Release  : 146
+Release  : 147
 URL      : https://cpan.metacpan.org/authors/id/B/BI/BINGOS/CPAN-Perl-Releases-5.20250120.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/B/BI/BINGOS/CPAN-Perl-Releases-5.20250120.tar.gz
 Summary  : 'Mapping Perl releases on CPAN to the location of the tarballs'
