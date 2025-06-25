@@ -6,13 +6,14 @@
 # autospec commit: 65cf152
 #
 Name     : perl-CPAN-Perl-Releases
-Version  : 5.20250528
-Release  : 156
-URL      : https://cpan.metacpan.org/authors/id/B/BI/BINGOS/CPAN-Perl-Releases-5.20250528.tar.gz
-Source0  : https://cpan.metacpan.org/authors/id/B/BI/BINGOS/CPAN-Perl-Releases-5.20250528.tar.gz
+Version  : 5.20250625
+Release  : 157
+URL      : https://cpan.metacpan.org/authors/id/B/BI/BINGOS/CPAN-Perl-Releases-5.20250625.tar.gz
+Source0  : https://cpan.metacpan.org/authors/id/B/BI/BINGOS/CPAN-Perl-Releases-5.20250625.tar.gz
 Summary  : 'Mapping Perl releases on CPAN to the location of the tarballs'
 Group    : Development/Tools
-License  : Artistic-1.0-Perl
+License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
+Requires: perl-CPAN-Perl-Releases-license = %{version}-%{release}
 Requires: perl-CPAN-Perl-Releases-perl = %{version}-%{release}
 BuildRequires : buildreq-cpan
 # Suppress stripping binaries
@@ -34,6 +35,14 @@ Requires: perl-CPAN-Perl-Releases = %{version}-%{release}
 dev components for the perl-CPAN-Perl-Releases package.
 
 
+%package license
+Summary: license components for the perl-CPAN-Perl-Releases package.
+Group: Default
+
+%description license
+license components for the perl-CPAN-Perl-Releases package.
+
+
 %package perl
 Summary: perl components for the perl-CPAN-Perl-Releases package.
 Group: Default
@@ -44,10 +53,10 @@ perl components for the perl-CPAN-Perl-Releases package.
 
 
 %prep
-%setup -q -n CPAN-Perl-Releases-5.20250528
-cd %{_builddir}/CPAN-Perl-Releases-5.20250528
+%setup -q -n CPAN-Perl-Releases-5.20250625
+cd %{_builddir}/CPAN-Perl-Releases-5.20250625
 pushd ..
-cp -a CPAN-Perl-Releases-5.20250528 buildavx2
+cp -a CPAN-Perl-Releases-5.20250625 buildavx2
 popd
 
 %build
@@ -72,6 +81,8 @@ make TEST_VERBOSE=1 test
 
 %install
 rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/share/package-licenses/perl-CPAN-Perl-Releases
+cp %{_builddir}/CPAN-Perl-Releases-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/perl-CPAN-Perl-Releases/3a260d995838bcc4f66740e7febc81d9eade9ac9 || :
 if test -f Makefile.PL; then
 make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
@@ -89,6 +100,10 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 %files dev
 %defattr(-,root,root,-)
 /usr/share/man/man3/CPAN::Perl::Releases.3
+
+%files license
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/perl-CPAN-Perl-Releases/3a260d995838bcc4f66740e7febc81d9eade9ac9
 
 %files perl
 %defattr(-,root,root,-)
